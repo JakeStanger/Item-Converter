@@ -53,8 +53,4 @@ public class ItemConverter
 			return Item.getItemFromBlock(Blocks.blockDisassembler);
 		}
 	 };
-	 
-	 // your mum has no boobs
 }
-
-//DDUDUDUDUDUUDE
