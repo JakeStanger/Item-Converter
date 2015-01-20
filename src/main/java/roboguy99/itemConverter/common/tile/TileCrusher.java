@@ -5,7 +5,7 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 
-public class TileDisassembler extends TileEntity implements IInventory
+public class TileCrusher extends TileEntity implements IInventory
 {
 	@Override
 	public int getSizeInventory()

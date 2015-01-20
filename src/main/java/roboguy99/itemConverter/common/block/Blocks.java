@@ -9,6 +9,6 @@ public class Blocks
 	
 	public Blocks()
 	{
-		blockDisassembler = new BlockDisassembler(Material.iron, "blockDisassembler");
+		blockDisassembler = new BlockCrusher(Material.iron, "blockDisassembler");
 	}
 }

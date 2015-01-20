@@ -5,16 +5,16 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
 import roboguy99.itemConverter.common.inventory.ContainerDisassembler;
-import roboguy99.itemConverter.common.tile.TileDisassembler;
+import roboguy99.itemConverter.common.tile.TileCrusher;
 import roboguy99.itemConverter.util.ResourceManager;
 
-public class GuiDisassembler extends GuiContainer
+public class GuiCrusher extends GuiContainer
 {
 	private final ResourceLocation texture = ResourceManager.BLANK_GUI;
 	
 	//private TileDisassembler disassembler;
 	
-	public GuiDisassembler(InventoryPlayer inventoryPlayer, TileDisassembler disassembler)
+	public GuiCrusher(InventoryPlayer inventoryPlayer, TileCrusher disassembler)
 	{
 		super(new ContainerDisassembler(inventoryPlayer, disassembler));
 		

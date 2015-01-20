@@ -8,17 +8,17 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
-import roboguy99.itemConverter.client.model.modelDisassembler;
+import roboguy99.itemConverter.client.model.ModelCrusher;
 import roboguy99.itemConverter.util.ResourceManager;
 
 public class RenderDisassembler extends TileEntitySpecialRenderer
 {
 	private final ResourceLocation texture = ResourceManager.DISASSEMBLER;
-	private final modelDisassembler model;
+	private final ModelCrusher model;
 	
 	public RenderDisassembler()
 	{
-		this.model = new modelDisassembler();
+		this.model = new ModelCrusher();
 	}
 	
 	public void renderTileEntityAt(TileEntity tileEntity, double x, double y, double z, float scale) 

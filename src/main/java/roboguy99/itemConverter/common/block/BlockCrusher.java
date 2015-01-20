@@ -6,13 +6,13 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import roboguy99.itemConverter.ItemConverter;
 import roboguy99.itemConverter.common.block.prefab.TileBlock;
-import roboguy99.itemConverter.common.tile.TileDisassembler;
+import roboguy99.itemConverter.common.tile.TileCrusher;
 import roboguy99.itemConverter.util.GuiHandler;
 import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
 
-public class BlockDisassembler extends TileBlock
+public class BlockCrusher extends TileBlock
 {
-	public BlockDisassembler(Material material, String name)
+	public BlockCrusher(Material material, String name)
 	{
 		super(material, name);
 	}
@@ -20,7 +20,7 @@ public class BlockDisassembler extends TileBlock
 	@Override
 	public TileEntity createNewTileEntity(World world, int var2)
 	{
-		return new TileDisassembler();
+		return new TileCrusher();
 	}
 	
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)

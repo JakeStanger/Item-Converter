@@ -10,7 +10,7 @@ import net.minecraft.entity.Entity;
  * modelDisassembler - Roboguy99
  * Created using Tabula 4.1.1
  */
-public class modelDisassembler extends ModelBase 
+public class ModelCrusher extends ModelBase 
 {
     public ModelRenderer layer9;
     public ModelRenderer layer1;
@@ -21,7 +21,7 @@ public class modelDisassembler extends ModelBase
     public ModelRenderer layer6;
     public ModelRenderer layer8;
 
-    public modelDisassembler() 
+    public ModelCrusher() 
     {
         this.textureWidth = 64;
         this.textureHeight = 32;
