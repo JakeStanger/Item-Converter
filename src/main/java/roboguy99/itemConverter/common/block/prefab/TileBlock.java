@@ -1,25 +1,37 @@
 package roboguy99.itemConverter.common.block.prefab;
 
+import roboguy99.itemConverter.ItemConverter;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class TileBlock extends BlockContainer
+public abstract class TileBlock extends BlockContainer
 {
 
 	protected TileBlock(Material material, String name)
 	{
 		super(material);
 		this.setBlockName(name);
+		this.setCreativeTab(ItemConverter.TAB_FOODTECH);
 		GameRegistry.registerBlock(this, name);
 	}
-
-	@Override
-	public TileEntity createNewTileEntity(World world, int var1)
+	
+	public int getRenderType()
 	{
-		return null;
+		return -1;
 	}
 	
+	public boolean isOpaqueCube()
+	{
+		return false;
+	}
+	
+	public boolean renderAsNormalBlock()
+	{
+		return false;
+	}
+	
+	public abstract TileEntity createNewTileEntity(World world, int var2);
 } 

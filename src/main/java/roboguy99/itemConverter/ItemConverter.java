@@ -1,6 +1,9 @@
 package roboguy99.itemConverter;
 
-import net.minecraft.init.Blocks;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import roboguy99.itemConverter.common.block.Blocks;
+import roboguy99.itemConverter.common.tile.RegisterTileEntities;
 import roboguy99.itemConverter.proxies.CommonProxy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -15,7 +18,7 @@ public class ItemConverter
 	//Mod data. Fallback if mc-mod.info fails to load.
 	public static final String modID = "Roboguy99ItemConverter";
 	public static final String modVersion = "0.0.1";
-	public static final String name = "Food Tech";
+	public static final String name = "Item Converter";
 	
 	public static ItemConverter instance;
 	
@@ -32,6 +35,8 @@ public class ItemConverter
 	public void init(FMLInitializationEvent event)
 	{
 		new Blocks();
+		new RegisterTileEntities();
+		proxy.registerProxies();
 	}
 	
 	@EventHandler
@@ -39,4 +44,13 @@ public class ItemConverter
 	{
 		
 	}
+	
+	public static final CreativeTabs TAB_FOODTECH = new CreativeTabs("tabFoodTech") 
+	 {
+
+		public Item getTabIconItem() 
+		{
+			return Item.getItemFromBlock(Blocks.blockDisassembler);
+		}
+	 };
 }
