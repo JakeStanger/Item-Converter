@@ -1,6 +1,5 @@
 package roboguy99.itemConverter.common.block.prefab;
 
-import roboguy99.itemConverter.ItemConverter;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
@@ -14,7 +13,6 @@ public abstract class TileBlock extends BlockContainer
 	{
 		super(material);
 		this.setBlockName(name);
-		this.setCreativeTab(ItemConverter.TAB_FOODTECH);
 		GameRegistry.registerBlock(this, name);
 	}
 	

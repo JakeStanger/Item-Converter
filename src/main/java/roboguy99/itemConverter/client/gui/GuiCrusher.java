@@ -4,7 +4,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
-import roboguy99.itemConverter.common.inventory.ContainerDisassembler;
+import roboguy99.itemConverter.common.inventory.ContainerCrusher;
 import roboguy99.itemConverter.common.tile.TileCrusher;
 import roboguy99.itemConverter.util.ResourceManager;
 
@@ -16,7 +16,7 @@ public class GuiCrusher extends GuiContainer
 	
 	public GuiCrusher(InventoryPlayer inventoryPlayer, TileCrusher disassembler)
 	{
-		super(new ContainerDisassembler(inventoryPlayer, disassembler));
+		super(new ContainerCrusher(inventoryPlayer, disassembler));
 		
 		// this.disassembler = disassembler; -- Used for progress bars later on
 		

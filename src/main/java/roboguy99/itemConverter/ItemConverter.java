@@ -3,6 +3,7 @@ package roboguy99.itemConverter;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import roboguy99.itemConverter.common.block.Blocks;
+import roboguy99.itemConverter.common.item.Items;
 import roboguy99.itemConverter.common.tile.RegisterTileEntities;
 import roboguy99.itemConverter.proxies.CommonProxy;
 import roboguy99.itemConverter.util.GuiHandler;
@@ -39,6 +40,7 @@ public class ItemConverter
 		proxy.registerProxies();
 		
 		new Blocks();
+		new Items();
 		new RegisterTileEntities();
 		
 		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler()); //Load the GUI handler
@@ -55,7 +57,7 @@ public class ItemConverter
 
 		public Item getTabIconItem() 
 		{
-			return Item.getItemFromBlock(Blocks.blockDisassembler);
+			return Item.getItemFromBlock(Blocks.blockCrusher);
 		}
 	 };
 }

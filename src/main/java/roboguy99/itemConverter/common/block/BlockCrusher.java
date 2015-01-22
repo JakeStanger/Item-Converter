@@ -1,7 +1,9 @@
 package roboguy99.itemConverter.common.block;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import roboguy99.itemConverter.ItemConverter;
@@ -28,4 +30,31 @@ public class BlockCrusher extends TileBlock
 		FMLNetworkHandler.openGui(player, ItemConverter.instance, GuiHandler.GUIID_DISASSEMBLER, world, x, y, z);
 		return true;
 	}
+	
+	public void breakBlock(World world, int i, int j, int k, int par5, int par6)
+	{
+		TileCrusher tileEntity = (TileCrusher)world.getTileEntity(i, j, k);
+		
+		if (tileEntity != null)
+        {
+                world.func_147480_a(tileEntity.primary_x, tileEntity.primary_y, tileEntity.primary_z, false);
+                world.removeTileEntity(tileEntity.primary_x, tileEntity.primary_y, tileEntity.primary_z);
+        }
+        //Same as above, but for the gag block tile entity.
+        world.removeTileEntity(i, j, k);
+	}
+	
+    @Override
+	public void onNeighborBlockChange(World world, int i, int j, int k, Block block)
+	{
+        TileCrusher tileEntity = (TileCrusher)world.getTileEntity(i, j, k);
+        if (tileEntity != null)
+        {
+            if(world.getBlock(tileEntity.primary_x, tileEntity.primary_y, tileEntity.primary_z) == Blocks.air)
+            {
+                world.func_147480_a(i, j, k, false);
+                world.removeTileEntity(i, j, k);
+            }
+        }
+    }
 }

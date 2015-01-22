@@ -11,12 +11,12 @@ import org.lwjgl.opengl.GL11;
 import roboguy99.itemConverter.client.model.ModelCrusher;
 import roboguy99.itemConverter.util.ResourceManager;
 
-public class RenderDisassembler extends TileEntitySpecialRenderer
+public class RenderCrusher extends TileEntitySpecialRenderer
 {
 	private final ResourceLocation texture = ResourceManager.DISASSEMBLER;
 	private final ModelCrusher model;
 	
-	public RenderDisassembler()
+	public RenderCrusher()
 	{
 		this.model = new ModelCrusher();
 	}
