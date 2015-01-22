@@ -2,9 +2,9 @@ package roboguy99.itemConverter.util;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
-import roboguy99.itemConverter.client.gui.GuiDisassembler;
-import roboguy99.itemConverter.common.inventory.ContainerDisassembler;
-import roboguy99.itemConverter.common.tile.TileDisassembler;
+import roboguy99.itemConverter.client.gui.GuiCrusher;
+import roboguy99.itemConverter.common.inventory.ContainerCrusher;
+import roboguy99.itemConverter.common.tile.TileCrusher;
 import cpw.mods.fml.common.network.IGuiHandler;
 
 public class GuiHandler implements IGuiHandler
@@ -17,7 +17,7 @@ public class GuiHandler implements IGuiHandler
 		switch(ID)
 		{
 			case GUIID_DISASSEMBLER:
-				return new ContainerDisassembler(player.inventory, (TileDisassembler) world.getTileEntity(x, y, z));
+				return new ContainerCrusher(player.inventory, (TileCrusher) world.getTileEntity(x, y, z));
 		}
 		
 		return null;
@@ -29,7 +29,7 @@ public class GuiHandler implements IGuiHandler
 		switch(ID)
 		{
 			case GUIID_DISASSEMBLER:
-				return new GuiDisassembler(player.inventory, (TileDisassembler) world.getTileEntity(x, y, z));
+				return new GuiCrusher(player.inventory, (TileCrusher) world.getTileEntity(x, y, z));
 		}
 		
 		return null;

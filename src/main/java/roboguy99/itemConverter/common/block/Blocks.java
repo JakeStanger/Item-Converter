@@ -5,10 +5,10 @@ import roboguy99.itemConverter.common.block.prefab.TileBlock;
 
 public class Blocks
 {
-	public static TileBlock blockDisassembler;
+	public static TileBlock blockCrusher;
 	
 	public Blocks()
 	{
-		blockDisassembler = new BlockDisassembler(Material.iron, "blockDisassembler");
+		blockCrusher = new BlockCrusher(Material.iron, "blockCrusher");
 	}
 }

@@ -3,14 +3,17 @@ package roboguy99.itemConverter;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import roboguy99.itemConverter.common.block.Blocks;
+import roboguy99.itemConverter.common.item.Items;
 import roboguy99.itemConverter.common.tile.RegisterTileEntities;
 import roboguy99.itemConverter.proxies.CommonProxy;
+import roboguy99.itemConverter.util.GuiHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 
 @Mod(modid = ItemConverter.modID, version = ItemConverter.modVersion, name = ItemConverter.name)
 public class ItemConverter
@@ -28,15 +31,19 @@ public class ItemConverter
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		
+		instance = this;
 	}
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
-		new Blocks();
-		new RegisterTileEntities();
 		proxy.registerProxies();
+		
+		new Blocks();
+		new Items();
+		new RegisterTileEntities();
+		
+		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler()); //Load the GUI handler
 	}
 	
 	@EventHandler
@@ -50,7 +57,7 @@ public class ItemConverter
 
 		public Item getTabIconItem() 
 		{
-			return Item.getItemFromBlock(Blocks.blockDisassembler);
+			return Item.getItemFromBlock(Blocks.blockCrusher);
 		}
 	 };
 }

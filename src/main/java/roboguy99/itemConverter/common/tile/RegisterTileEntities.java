@@ -6,6 +6,6 @@ public class RegisterTileEntities
 {
 	public RegisterTileEntities()
 	{
-		GameRegistry.registerTileEntity(TileDisassembler.class, "r99_disassembler");
+		GameRegistry.registerTileEntity(TileCrusher.class, "r99_disassembler");
 	}
 }
