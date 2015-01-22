@@ -18,7 +18,7 @@ public class ContainerCrusher extends Container
 			}
 		}
 		
-		for(int i = 0; i < 9; i++) //Create the hotbar slots
+		for(int i = 0; i < 9; i++) //Create the hotbar slots, No
 		{
 			this.addSlotToContainer(new Slot(inventoryPlayer, i, 8+18*i, 142));
 		}
@@ -29,4 +29,5 @@ public class ContainerCrusher extends Container
 	{
 		return true;
 	}
+	
 }

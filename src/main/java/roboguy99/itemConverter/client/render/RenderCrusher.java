@@ -5,9 +5,7 @@ import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
-
 import org.lwjgl.opengl.GL11;
-
 import roboguy99.itemConverter.client.model.ModelCrusher;
 import roboguy99.itemConverter.util.ResourceManager;
 
