@@ -6,10 +6,14 @@ import roboguy99.itemConverter.common.item.prefab.ItemBlock;
 
 public class Items
 {
+	//Items
 	public static ItemBlock itemBlockCrusher;
+	
+	//Item descriptions
+	private static final String CRUSHER_DESC = "The main block of the crusher multiblock structure";
 	
 	public Items()
 	{
-		itemBlockCrusher = new ItemBlockCrusher("itemBlockCrusher", "diamond", Blocks.blockCrusher);
+		itemBlockCrusher = new ItemBlockCrusher("itemBlockCrusher", "diamond", Blocks.blockCrusher, Items.CRUSHER_DESC);
 	}
 }
