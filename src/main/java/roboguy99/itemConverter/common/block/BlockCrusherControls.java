@@ -10,9 +10,9 @@ import roboguy99.itemConverter.common.tile.TileCrusher;
 import roboguy99.itemConverter.util.GuiHandler;
 import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
 
-public class BlockCrusher extends TileBlock
+public class BlockCrusherControls extends TileBlock
 {
-	public BlockCrusher(Material material, String name)
+	public BlockCrusherControls(Material material, String name)
 	{
 		super(material, name);
 	}
@@ -25,7 +25,7 @@ public class BlockCrusher extends TileBlock
 	
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
 	{
-		FMLNetworkHandler.openGui(player, ItemConverter.instance, GuiHandler.GUIID_DISASSEMBLER, world, x, y, z);
+		FMLNetworkHandler.openGui(player, ItemConverter.instance, GuiHandler.GUIID_CRUSHER_CONTROLS, world, x, y, z);
 		return true;
 	}
 }

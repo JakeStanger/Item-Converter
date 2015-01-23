@@ -11,7 +11,7 @@ import roboguy99.itemConverter.util.ResourceManager;
 
 public class RenderCrusher extends TileEntitySpecialRenderer
 {
-	private final ResourceLocation texture = ResourceManager.CRUSHER;
+	private final ResourceLocation texture = ResourceManager.CRUSHER_CONTROLS;
 	private final ModelCrusher model;
 	
 	public RenderCrusher()

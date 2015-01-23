@@ -9,7 +9,7 @@ public class ResourceManager
 	private static final String GUI_TEXTURE_PATH = "roboguy99:textures/gui/";
 	
 	//Tile entity locations
-	public static final ResourceLocation CRUSHER = new ResourceLocation(ResourceManager.MODEL_TEXTURE_PATH + "modelDisassembler.png");
+	public static final ResourceLocation CRUSHER_CONTROLS = new ResourceLocation(ResourceManager.MODEL_TEXTURE_PATH + "modelCrusher.png");
 	
 	//GUI locations
 	public static final ResourceLocation BLANK_GUI = new ResourceLocation(ResourceManager.GUI_TEXTURE_PATH + "blank.png");

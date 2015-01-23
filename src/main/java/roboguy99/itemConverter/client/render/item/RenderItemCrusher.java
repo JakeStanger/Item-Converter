@@ -14,7 +14,7 @@ import roboguy99.itemConverter.util.ResourceManager;
 public class RenderItemCrusher implements IItemRenderer
 {
 	protected ModelCrusher model = new ModelCrusher();
-	private final ResourceLocation texture = ResourceManager.CRUSHER;
+	private final ResourceLocation texture = ResourceManager.CRUSHER_CONTROLS;
 	
 	@Override
 	public boolean handleRenderType(ItemStack item, ItemRenderType type)

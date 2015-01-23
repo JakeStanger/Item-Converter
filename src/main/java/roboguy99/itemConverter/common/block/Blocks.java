@@ -9,6 +9,6 @@ public class Blocks
 	
 	public Blocks()
 	{
-		blockCrusher = new BlockCrusher(Material.iron, "blockCrusher");
+		blockCrusher = new BlockCrusherControls(Material.iron, "blockCrusher");
 	}
 }

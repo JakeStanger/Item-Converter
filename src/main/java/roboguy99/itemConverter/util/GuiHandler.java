@@ -9,14 +9,14 @@ import cpw.mods.fml.common.network.IGuiHandler;
 
 public class GuiHandler implements IGuiHandler
 {
-	public static final int GUIID_DISASSEMBLER = 0;
+	public static final int GUIID_CRUSHER_CONTROLS = 0;
 	
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
 	{
 		switch(ID)
 		{
-			case GUIID_DISASSEMBLER:
+			case GUIID_CRUSHER_CONTROLS:
 				return new ContainerCrusher(player.inventory, (TileCrusher) world.getTileEntity(x, y, z));
 		}
 		
@@ -28,7 +28,7 @@ public class GuiHandler implements IGuiHandler
 	{
 		switch(ID)
 		{
-			case GUIID_DISASSEMBLER:
+			case GUIID_CRUSHER_CONTROLS:
 				return new GuiCrusher(player.inventory, (TileCrusher) world.getTileEntity(x, y, z));
 		}
 		
