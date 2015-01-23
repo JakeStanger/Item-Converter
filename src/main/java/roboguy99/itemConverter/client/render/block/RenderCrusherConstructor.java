@@ -5,16 +5,18 @@ import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
+
 import org.lwjgl.opengl.GL11;
+
 import roboguy99.itemConverter.client.model.ModelCrusher;
 import roboguy99.itemConverter.util.ResourceManager;
 
-public class RenderCrusher extends TileEntitySpecialRenderer
+public class RenderCrusherConstructor extends TileEntitySpecialRenderer
 {
-	private final ResourceLocation texture = ResourceManager.CRUSHER_CONTROLS;
-	private final ModelCrusher model;
+	private final ResourceLocation texture = ResourceManager.CRUSHER_CONTROLS; //TODO Update texture
+	private final ModelCrusher model; //TODO Update model
 	
-	public RenderCrusher()
+	public RenderCrusherConstructor()
 	{
 		this.model = new ModelCrusher();
 	}

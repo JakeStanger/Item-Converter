@@ -57,7 +57,7 @@ public class ItemConverter
 
 		public Item getTabIconItem() 
 		{
-			return Item.getItemFromBlock(Blocks.blockCrusher);
+			return Items.itemBlockCrusherConstructor;
 		}
 	 };
 }

@@ -5,7 +5,7 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
 import roboguy99.itemConverter.common.inventory.ContainerCrusher;
-import roboguy99.itemConverter.common.tile.TileCrusher;
+import roboguy99.itemConverter.common.tile.TileCrusherControls;
 import roboguy99.itemConverter.util.ResourceManager;
 
 public class GuiCrusher extends GuiContainer
@@ -14,7 +14,7 @@ public class GuiCrusher extends GuiContainer
 	
 	//private TileDisassembler disassembler;
 	
-	public GuiCrusher(InventoryPlayer inventoryPlayer, TileCrusher disassembler)
+	public GuiCrusher(InventoryPlayer inventoryPlayer, TileCrusherControls disassembler)
 	{
 		super(new ContainerCrusher(inventoryPlayer, disassembler));
 		

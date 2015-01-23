@@ -4,11 +4,11 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
-import roboguy99.itemConverter.common.tile.TileCrusher;
+import roboguy99.itemConverter.common.tile.TileCrusherControls;
 
 public class ContainerCrusher extends Container
 {
-	public ContainerCrusher(InventoryPlayer inventoryPlayer, TileCrusher grindstone)
+	public ContainerCrusher(InventoryPlayer inventoryPlayer, TileCrusherControls grindstone)
 	{
 		for(int i = 0; i < 3; i++) //Create the inventory slots
 		{

@@ -11,9 +11,9 @@ import org.lwjgl.opengl.GL11;
 import roboguy99.itemConverter.client.model.ModelCrusher;
 import roboguy99.itemConverter.util.ResourceManager;
 
-public class RenderItemCrusher implements IItemRenderer
+public class RenderItemCrusherControls implements IItemRenderer
 {
-	protected ModelCrusher model = new ModelCrusher();
+	protected ModelCrusher model = new ModelCrusher(); //TODO Update model
 	private final ResourceLocation texture = ResourceManager.CRUSHER_CONTROLS;
 	
 	@Override
